@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b0603d02-7a20-4880-ac31-f8f11bbabd0f" name="vmware">
+        <fileTransfer accessType="SFTP" host="152.228.163.56" port="22" sshConfigId="89549ca6-9126-4403-bd2a-988a665a45f3" sshConfig="ubuntu@152.228.163.56:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="0c92b70d-833e-4005-a560-31792caef0cc" name="backend">
+        <fileTransfer accessType="SFTP" host="152.228.163.56" port="22" sshConfigId="89549ca6-9126-4403-bd2a-988a665a45f3" sshConfig="ubuntu@152.228.163.56:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,4 @@
+require 'ConexionPdoEnv.php';
+
+$conexionPdo = new ConexionPdoEnv();
+$pdo = $conexionPdo::conectar(".envCoche");

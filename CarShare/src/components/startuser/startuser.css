@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body{
+    margin: 0;
+}
+
+.formcontainer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.containeruser {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+.containeruser p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.containeruser span {
+    font-size: 12px;
+}
+
+.containeruser a {
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.containeruser button {
+    background-color: #3c1094;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.containeruser button.hidden {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.containeruser form {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.containeruser input {
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.containeruser.active .sign-in {
+    transform: translateX(100%);
+}
+
+.sign-up {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.containeruser.active .sign-up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move {
+    0%, 49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.toggle-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.containeruser.active .toggle-container {
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle {
+    background-color: #3c1094;
+    height: 100%;
+    background: linear-gradient(to right, #5c6bc0, #512da8);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.containeruser.active .toggle {
+    transform: translateX(50%);
+}
+
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px; /* Ajustar padding */
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+    overflow: hidden; /* Evitar desbordamiento */
+}
+
+.toggle-left {
+    transform: translateX(-200%);
+}
+
+.containeruser.active .toggle-left {
+    transform: translateX(0);
+}
+
+.toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.containeruser.active .toggle-right {
+    transform: translateX(200%);
+}
+
+.toggle-container .toggle .toggle-panel p {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 12px; /* Reducir tamaño de fuente */
+    max-width: 90%; /* Limitar el ancho máximo */
+    overflow-wrap: break-word; /* Permitir salto de línea si es necesario */
+}
+
+@media (max-width: 768px) {
+    .containeruser {
+        width: 90%;
+        min-height: 400px;
+        margin: 20px;
+    }
+
+    .containeruser p {
+        font-size: 12px;
+    }
+
+    .containeruser span {
+        font-size: 11px;
+    }
+
+    .containeruser button {
+        padding: 10px 30px;
+        font-size: 11px;
+    }
+
+    .containeruser input {
+        font-size: 12px;
+    }
+
+    .social-icons a {
+        width: 35px;
+        height: 35px;
+    }
+
+    .toggle-panel {
+        padding: 10px; /* Ajustar padding para móviles */
+        max-width: 90%; /* Limitar el ancho */
+    }
+
+    .toggle-container .toggle .toggle-panel h1 {
+        font-size: 18px; /* Reducir tamaño de fuente */
+    }
+
+    .toggle-container .toggle .toggle-panel p {
+        font-size: 10px; /* Reducir tamaño de fuente aún más */
+        margin: 10px 0; /* Ajustar márgenes */
+    }
+}
+
+.profile-photo-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.profile-photo-container:hover .profile-photo {
+    filter: brightness(50%);
+}
+
+.edit-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px; /* Tamaño del ícono */
+}
+
+.profile-photo-container:hover .edit-icon {
+    display: block;
+}
+
+
+
+@media (max-width: 480px) {
+    .containeruser {
+        width: 95%;
+        min-height: 350px;
+    }
+
+    .containeruser p {
+        font-size: 10px;
+    }
+
+    .containeruser span {
+        font-size: 10px;
+    }
+
+    .containeruser button {
+        padding: 8px 20px;
+        font-size: 10px;
+    }
+
+    .containeruser input {
+        font-size: 10px;
+    }
+
+    .social-icons a {
+        width: 30px;
+        height: 30px;
+    }
+}

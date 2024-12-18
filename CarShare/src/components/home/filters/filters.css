@@ -1,0 +1,56 @@
+.select-menu {
+    display: flex;
+}
+
+.select-menu .select-btn {
+    display: flex;
+    height: 5px;
+    width: auto;
+    background-color: #fff;
+    color: black;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 25px;
+    margin-right: 10px;
+    border: 1px #ddd solid;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+.options {
+    position: relative;
+    color: black;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    max-height: 200px; /* Limita la altura */
+    overflow-y: scroll; /* Permite desplazamiento vertical */
+}
+
+/* Ocultar la barra de desplazamiento en Chrome y Safari */
+.options::-webkit-scrollbar {
+    display: none;
+}
+
+/* Ocultar la barra de desplazamiento en Firefox */
+.options {
+    scrollbar-width: none; /* Firefox */
+}
+
+.options .option {
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+    align-items: center;
+    background-color: #fff;
+}
+
+.options .option:hover {
+    background-color: #F2F2F2;
+}
+

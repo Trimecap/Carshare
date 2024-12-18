@@ -1,0 +1,5 @@
+HOST=localhost
+USER=karim
+PASSWORD=TELECINCo2!
+BD=CARSHARING
+DATA_PATH=/datos/
